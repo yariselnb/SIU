@@ -1,0 +1,508 @@
+/*==========================================================
+ GESTIÓN 2026 PREMIUM
+ responsive.css
+ Adaptación Responsive
+==========================================================*/
+
+/*=====================================
+ PANTALLAS EXTRA GRANDES
+======================================*/
+
+@media (min-width:1600px){
+
+.container,
+section{
+
+max-width:1500px;
+margin:auto;
+
+}
+
+.hero h1{
+
+font-size:5rem;
+
+}
+
+.hero p{
+
+font-size:1.3rem;
+
+}
+
+}
+
+
+/*=====================================
+ LAPTOPS
+======================================*/
+
+@media (max-width:1200px){
+
+.navbar{
+
+padding:18px 30px;
+
+}
+
+.hero{
+
+padding:120px 8%;
+
+}
+
+.hero h1{
+
+font-size:3.5rem;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.dashboard{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*=====================================
+ TABLETS
+======================================*/
+
+@media (max-width:992px){
+
+.navbar{
+
+flex-direction:column;
+
+padding:20px;
+
+gap:20px;
+
+}
+
+.navbar ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+padding-top:180px;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+}
+
+.hero h3{
+
+font-size:1rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.metrics{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline{
+
+padding-left:25px;
+
+}
+
+.timeline::before{
+
+left:6px;
+
+}
+
+.timeline-item::before{
+
+left:-22px;
+
+}
+
+.chart-container{
+
+overflow-x:auto;
+
+}
+
+}
+
+
+/*=====================================
+ CELULARES GRANDES
+======================================*/
+
+@media (max-width:768px){
+
+body{
+
+font-size:15px;
+
+}
+
+.hero{
+
+min-height:90vh;
+
+padding:140px 30px 80px;
+
+}
+
+.hero h1{
+
+font-size:2.2rem;
+
+line-height:1.2;
+
+}
+
+.hero p{
+
+font-size:.95rem;
+
+margin-top:20px;
+
+}
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+padding:16px;
+
+}
+
+section{
+
+padding:70px 30px;
+
+}
+
+section h2{
+
+font-size:1.8rem;
+
+text-align:center;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+.dashboard-card{
+
+padding:25px;
+
+}
+
+.counter{
+
+font-size:2.4rem;
+
+}
+
+.metric{
+
+padding:18px;
+
+}
+
+.chart-title{
+
+font-size:1.2rem;
+
+text-align:center;
+
+}
+
+.dashboard-table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+footer{
+
+padding:30px;
+
+}
+
+}
+
+
+/*=====================================
+ CELULARES PEQUEÑOS
+======================================*/
+
+@media (max-width:480px){
+
+.logo{
+
+font-size:1rem;
+
+text-align:center;
+
+}
+
+.navbar{
+
+padding:15px;
+
+}
+
+.navbar ul{
+
+gap:12px;
+
+}
+
+.navbar a{
+
+font-size:.9rem;
+
+}
+
+.hero{
+
+padding:120px 20px 70px;
+
+}
+
+.hero h1{
+
+font-size:1.8rem;
+
+}
+
+.hero h3{
+
+font-size:.85rem;
+
+}
+
+.hero p{
+
+font-size:.9rem;
+
+}
+
+.btn{
+
+font-size:.9rem;
+
+padding:14px;
+
+}
+
+section{
+
+padding:60px 20px;
+
+}
+
+section h2{
+
+font-size:1.6rem;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+.counter{
+
+font-size:2rem;
+
+}
+
+.dashboard-icon{
+
+font-size:2rem;
+
+}
+
+.metric span{
+
+font-size:1.6rem;
+
+}
+
+blockquote{
+
+font-size:1rem;
+
+padding:20px;
+
+}
+
+canvas{
+
+padding:10px;
+
+}
+
+}
+
+
+/*=====================================
+ ORIENTACIÓN HORIZONTAL
+======================================*/
+
+@media (max-height:500px) and (orientation:landscape){
+
+.hero{
+
+height:auto;
+
+padding:120px 40px;
+
+}
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+.navbar{
+
+position:relative;
+
+}
+
+}
+
+
+/*=====================================
+ IMÁGENES
+======================================*/
+
+img{
+
+max-width:100%;
+height:auto;
+display:block;
+
+}
+
+
+/*=====================================
+ VIDEOS
+======================================*/
+
+video{
+
+max-width:100%;
+height:auto;
+display:block;
+
+}
+
+
+/*=====================================
+ IFRAME
+======================================*/
+
+iframe{
+
+width:100%;
+border:none;
+
+}
+
+
+/*=====================================
+ TABLAS
+======================================*/
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+@media(max-width:768px){
+
+table{
+
+display:block;
+overflow-x:auto;
+
+}
+
+}
+
+
+/*=====================================
+ ANIMACIONES
+======================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+animation:none !important;
+transition:none !important;
+scroll-behavior:auto !important;
+
+}
+
+}

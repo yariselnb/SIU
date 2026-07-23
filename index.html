@@ -4,115 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestión 2026 Premium</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/dashboard.css">
 <link rel="stylesheet" href="css/responsive.css">
-<script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script defer src="js/script.js"></script>
 </head>
+
 <body>
 
-<header class="hero" id="inicio">
 <nav class="navbar">
 <div class="logo">UTP · Gestión 2026</div>
+
 <ul>
+<li><a href="#inicio">Inicio</a></li>
 <li><a href="#rol">Mi Rol</a></li>
-<li><a href="#estrategica">Gestión Estratégica</a></li>
-<li><a href="#operativa">Gestión Operativa</a></li>
+<li><a href="#estrategica">Estratégica</a></li>
+<li><a href="#operativa">Operativa</a></li>
 <li><a href="#admision">Admisión</a></li>
-<li><a href="#inteligencia">Inteligencia</a></li>
+<li><a href="#inteligencia">Datos</a></li>
 <li><a href="#innovacion">Innovación</a></li>
 <li><a href="#impacto">Impacto</a></li>
 </ul>
 </nav>
 
-<div class="hero-content">
+<header id="inicio" class="hero">
+<div class="hero-content fade-up">
+
 <h3>Universidad Tecnológica de Panamá</h3>
-<h1>La historia detrás de la Gestión 2026</h1>
-<p>Una experiencia interactiva sobre las contribuciones realizadas en la Dirección Nacional del Sistema de Ingreso Universitario y en investigación.</p>
-<a class="btn" href="#rol">Explorar</a>
+
+<h1>La Historia detrás de la Gestión 2026</h1>
+
+<p>
+Presentación ejecutiva e interactiva de las funciones desarrolladas
+en la Dirección Nacional del Sistema de Ingreso Universitario
+y las actividades de investigación.
+</p>
+
+<a href="#rol" class="btn pulse">Comenzar</a>
+
 </div>
 </header>
 
 <main>
 
-<section id="rol">
+<section id="rol" class="reveal">
+
 <h2>Mi Rol Institucional</h2>
+
 <div class="cards">
-<article class="card">
+
+<div class="card">
 <h3>50 % Investigación</h3>
-<p>Investigación, innovación y transformación digital.</p>
-</article>
-<article class="card">
+<p>Desarrollo de proyectos de investigación, innovación, análisis y transformación digital.</p>
+</div>
+
+<div class="card">
 <h3>50 % Dirección Nacional SIU</h3>
-<p>Planificación, coordinación, análisis estadístico y apoyo institucional.</p>
-</article>
+<p>Planificación estratégica, coordinación académica, estadísticas institucionales y apoyo a la toma de decisiones.</p>
 </div>
+
+</div>
+
 </section>
 
-<section id="estrategica">
+<section id="estrategica" class="reveal">
+
 <h2>Gestión Estratégica</h2>
+
 <div class="cards">
-<div class="card">Anteproyecto presupuestario</div>
-<div class="card">Proyecto de inversión</div>
-<div class="card">Calendario SIU</div>
-<div class="card">Compras PAA y ELASH</div>
-<div class="card">Servicio Social</div>
+<div class="card"><h3>Presupuesto</h3><p>Anteproyecto presupuestario.</p></div>
+<div class="card"><h3>Inversión</h3><p>Proyecto institucional.</p></div>
+<div class="card"><h3>Calendarios</h3><p>Calendario SIU y Admisión.</p></div>
+<div class="card"><h3>Compras</h3><p>PAA y ELASH.</p></div>
 </div>
+
 </section>
 
-<section id="operativa">
+<section id="operativa" class="reveal">
+
 <h2>Gestión Operativa</h2>
+
 <div class="cards">
-<div class="card">Programa de Verano</div>
-<div class="card">IVEU</div>
-<div class="card">Versant</div>
-<div class="card">College Board</div>
-<div class="card">Oferta Académica</div>
+<div class="card"><h3>IVEU</h3></div>
+<div class="card"><h3>Programa de Verano</h3></div>
+<div class="card"><h3>College Board</h3></div>
+<div class="card"><h3>Versant</h3></div>
 </div>
+
 </section>
 
-<section id="admision">
+<section id="admision" class="reveal">
+
 <h2>Proceso de Admisión</h2>
+
 <ul>
 <li>PAA</li>
 <li>ELASH</li>
 <li>Certificaciones</li>
 <li>Procesos especiales</li>
 </ul>
+
 </section>
 
-<section id="inteligencia">
-<h2>Inteligencia Institucional</h2>
-<canvas id="dashboardChart" height="120"></canvas>
-<p>Espacio destinado para indicadores estratégicos y toma de decisiones.</p>
-</section>
+<section id="inteligencia" class="reveal">
 
-<section id="innovacion">
-<h2>Innovación y Transformación Digital</h2>
-<div class="cards">
-<div class="card">Power Automate</div>
-<div class="card">Automatización de formularios</div>
-<div class="card">Correos masivos</div>
-<div class="card">FTP</div>
+<h2>Dashboard Ejecutivo</h2>
+
+<div class="dashboard">
+
+<div class="dashboard-card">
+<div class="counter" data-target="18">0</div>
+<div class="dashboard-title">Procesos</div>
 </div>
+
+<div class="dashboard-card">
+<div class="counter" data-target="12">0</div>
+<div class="dashboard-title">Informes</div>
+</div>
+
+<div class="dashboard-card">
+<div class="counter" data-target="6">0</div>
+<div class="dashboard-title">Automatizaciones</div>
+</div>
+
+<div class="dashboard-card">
+<div class="counter" data-target="9">0</div>
+<div class="dashboard-title">Coordinaciones</div>
+</div>
+
+</div>
+
+<div class="chart-container">
+<h3 class="chart-title">Indicadores de Gestión</h3>
+<canvas id="dashboardChart"></canvas>
+</div>
+
 </section>
 
-<section id="impacto">
+<section id="innovacion" class="reveal">
+
+<h2>Innovación</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h4>Automatización</h4>
+<p>Power Automate y Microsoft Forms.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Comunicación</h4>
+<p>Correos masivos y procesos digitales.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Transformación</h4>
+<p>Mejoras continuas de procesos.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="impacto" class="reveal">
+
 <h2>Impacto Institucional</h2>
+
 <blockquote>
-Cada proceso fortalecido representa una oportunidad para miles de futuros estudiantes de la Universidad Tecnológica de Panamá.
+Cada actividad desarrollada durante el año 2026 contribuyó al fortalecimiento
+de la gestión institucional y al mejoramiento del proceso de ingreso de miles
+de futuros estudiantes de la Universidad Tecnológica de Panamá.
 </blockquote>
+
 </section>
 
 </main>
 
 <footer>
-<p>© 2026 · Universidad Tecnológica de Panamá · Dirección Nacional del Sistema de Ingreso Universitario</p>
+<p>Universidad Tecnológica de Panamá · Dirección Nacional del Sistema de Ingreso Universitario · Gestión 2026</p>
 </footer>
 
 </body>

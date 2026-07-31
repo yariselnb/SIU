@@ -2,565 +2,478 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informe de Gestión 2026 · Dirección Nacional del SIU</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>PAA I Convocatoria 2026-2027 · UTP</title>
 <style>
-  :root{
-    --ink:#2A1030;
-    --ink-2:#3C1740;
-    --ink-3:#4A1F4C;
-    --gold:#E893B3;
-    --gold-soft:#F5C4D6;
-    --paper:#FBEEF1;
-    --paper-dim:#E7C9D3;
-    --teal:#9075C4;
-    --teal-soft:#BCA6E0;
-    --muted:#C6A4C0;
-    --text-on-dark:#FBEEF1;
-    --text-on-dark-dim:#DDBDD1;
-    --metal:#D9A857;
-  }
-  *{box-sizing:border-box;}
-  html,body{
-    margin:0;padding:0;height:100%;
-    background:
-      radial-gradient(circle at 12% 15%, rgba(232,147,179,.16), transparent 42%),
-      radial-gradient(circle at 88% 12%, rgba(217,168,87,.12), transparent 40%),
-      radial-gradient(circle at 80% 85%, rgba(144,117,196,.16), transparent 45%),
-      var(--ink);
-    font-family:'IBM Plex Sans',sans-serif;
-    color:var(--text-on-dark);
-    overflow:hidden;
-  }
-  .glow{
-    position:fixed; border-radius:50%; filter:blur(70px); pointer-events:none; z-index:0;
-    opacity:.55; mix-blend-mode:screen;
-  }
-  .glow.g1{ width:420px;height:420px; background:radial-gradient(circle, rgba(232,147,179,.5), transparent 70%); top:-120px; left:-100px; }
-  .glow.g2{ width:380px;height:380px; background:radial-gradient(circle, rgba(217,168,87,.4), transparent 70%); bottom:-140px; right:-80px; }
-  .glow.g3{ width:300px;height:300px; background:radial-gradient(circle, rgba(144,117,196,.45), transparent 70%); bottom:10%; left:38%; }
-  .display{font-family:'Fraunces',serif;}
-  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
-  #deck{
-    position:relative;
-    width:100%;height:100vh;
-    display:flex;align-items:stretch;justify-content:stretch;
-  }
+:root{
+  --navy:#0A2A5E;
+  --royal:#14448C;
+  --gold:#F2A900;
+  --green:#2D6A4F;
+  --cream:#F7F1DE;
+  --paper:#FFFDF7;
+  --ink:#0A2A5E;
+}
 
-  /* the signature seam — a thin gold line running through every slide */
-  .seam{
-    position:fixed;
-    top:0;bottom:0;
-    left:34%;
-    width:2px;
-    background:linear-gradient(180deg, transparent 0%, var(--gold) 10%, var(--metal) 50%, var(--teal-soft) 78%, transparent 100%);
-    background-size:100% 220%;
-    box-shadow:0 0 18px 1px rgba(232,147,179,.35);
-    opacity:.75;
-    z-index:5;
-    pointer-events:none;
-    animation:seamflow 9s ease-in-out infinite;
-  }
-  @keyframes seamflow{
-    0%{ background-position:0 0%; }
-    50%{ background-position:0 100%; }
-    100%{ background-position:0 0%; }
-  }
-  @media (max-width:760px){ .seam{ left:0; display:none; } }
+*{box-sizing:border-box; margin:0; padding:0;}
 
-  .slide{
-    position:absolute;
-    inset:0;
-    display:flex;
-    opacity:0;
-    pointer-events:none;
-    transform:translateY(18px) scale(.985);
-    transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);
-    padding: 6.5vh 6vw 9vh 6vw;
-    z-index:1;
-  }
-  .slide.active{
-    opacity:1;
-    pointer-events:auto;
-    transform:translateY(0) scale(1);
-    z-index:2;
-  }
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  padding:0 0 60px 0;
+}
 
-  .eyebrow{
-    font-size:.74rem;
-    font-weight:500;
-    text-transform:uppercase;
-    letter-spacing:.18em;
-    color:var(--gold-soft);
-    margin-bottom:14px;
-    text-shadow:0 0 18px rgba(232,147,179,.35);
-  }
-  .eyebrow .n{ color:var(--muted); margin-left:8px; }
+.wrap{max-width:960px; margin:0 auto; padding:0 28px;}
 
-  h1.title{
-    font-size:clamp(2.4rem, 5.2vw, 4.2rem);
-    font-weight:700;
-    line-height:1.05;
-    margin:0 0 18px 0;
-    letter-spacing:-.01em;
-    background:linear-gradient(115deg, var(--gold-soft) 10%, var(--gold) 45%, var(--metal) 75%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    filter:drop-shadow(0 0 26px rgba(232,147,179,.25));
-  }
-  h2.title{
-    font-size:clamp(1.7rem, 3.2vw, 2.6rem);
-    font-weight:700;
-    line-height:1.12;
-    margin:0 0 8px 0;
-    color:var(--text-on-dark);
-  }
-  h2.title .accent{
-    background:linear-gradient(115deg, var(--gold-soft), var(--gold));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  p.lead{
-    font-size:1.05rem;
-    color:var(--text-on-dark-dim);
-    max-width:640px;
-    line-height:1.55;
-    margin:0 0 6px 0;
-  }
+/* HEADER */
+header{
+  background:linear-gradient(135deg, var(--navy) 0%, var(--royal) 100%);
+  color:#fff;
+  padding:38px 0 46px 0;
+  position:relative;
+  overflow:hidden;
+}
+header::after{
+  content:"";
+  position:absolute;
+  right:-80px; top:-80px;
+  width:280px; height:280px;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,0.12);
+}
+header::before{
+  content:"";
+  position:absolute;
+  right:20px; bottom:-120px;
+  width:220px; height:220px;
+  border-radius:50%;
+  border:2px solid rgba(242,169,0,0.18);
+}
+.header-inner{position:relative; z-index:2;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+  margin-bottom:10px;
+}
+h1{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(30px,5vw,46px);
+  line-height:1.08;
+  letter-spacing:-0.5px;
+  max-width:640px;
+}
+.sub{
+  margin-top:12px;
+  font-size:15px;
+  color:rgba(255,255,255,0.78);
+  max-width:520px;
+  font-weight:400;
+}
 
-  .slide-body{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-  }
+/* HERO STAT */
+.hero-stats{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:1px;
+  background:rgba(255,255,255,0.15);
+  margin-top:34px;
+  border-radius:10px;
+  overflow:hidden;
+}
+.hero-cell{
+  background:rgba(255,255,255,0.06);
+  padding:20px 22px;
+}
+.hero-cell .num{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(26px,4vw,40px);
+  color:var(--gold);
+  line-height:1;
+}
+.hero-cell .lbl{
+  font-size:12.5px;
+  color:rgba(255,255,255,0.75);
+  margin-top:6px;
+  font-weight:500;
+}
 
-  /* ---- Portada ---- */
-  #s0 .slide-body{ max-width:760px; }
-  .role-chip-row{ display:flex; gap:10px; margin-top:30px; flex-wrap:wrap; }
-  .chip{
-    display:flex; align-items:center; gap:8px;
-    padding:8px 14px;
-    border:1px solid rgba(232,147,179,.35);
-    border-radius:999px;
-    font-size:.82rem;
-    color:var(--text-on-dark-dim);
-  }
-  .dot-chip{ width:7px;height:7px;border-radius:50%; }
-  .start-hint{
-    margin-top:52px;
-    display:inline-flex;align-items:center;gap:10px;
-    font-size:.85rem;color:var(--gold-soft);
-    cursor:pointer;
-    width:fit-content;
-  }
-  .start-hint svg{ transition:transform .3s ease; }
-  .start-hint:hover svg{ transform:translateX(6px); }
+/* SECTION LABEL */
+.section-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:46px 0 18px 0;
+}
+.section-label .dot{
+  width:9px; height:9px; border-radius:50%;
+  background:var(--gold);
+  flex-shrink:0;
+}
+.section-label span{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--navy);
+}
+.section-label::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(10,42,94,0.15);
+}
 
-  /* ---- Rol dual slide ---- */
-  .split-wrap{
-    display:flex; width:100%; height:52vh; border-radius:6px; overflow:hidden;
-    border:1px solid rgba(232,147,179,.25);
-  }
-  .split-half{
-    flex:1;
-    padding:34px 30px;
-    display:flex;flex-direction:column;justify-content:space-between;
-    transition:flex .5s ease, background .4s ease;
-    cursor:pointer;
-    position:relative;
-  }
-  .split-half.admin{ background:linear-gradient(160deg, var(--ink-3), var(--ink-2)); }
-  .split-half.research{ background:linear-gradient(160deg, #3A2E55, #2E2348); }
-  .split-half:hover{ flex:1.25; box-shadow: inset 0 0 60px rgba(232,147,179,.12); }
-  .split-pct{
-    font-family:'Fraunces',serif; font-size:3.6rem; font-weight:700; line-height:1;
-    background:linear-gradient(115deg, var(--gold-soft), var(--gold));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  .split-half.research .split-pct{
-    background:linear-gradient(115deg, var(--teal-soft), var(--teal));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  .split-label{ font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; color:var(--gold-soft); margin-top:10px; }
-  .split-desc{ font-size:.9rem; color:var(--text-on-dark-dim); line-height:1.5; margin-top:18px; max-width:320px; }
-  .split-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
-  .tag{ font-size:.72rem; padding:4px 9px; border-radius:5px; background:rgba(255,255,255,.06); color:var(--text-on-dark-dim); }
+/* CAMPUS METROPOLITANO CARD */
+.metro-card{
+  background:var(--paper);
+  border:1px solid rgba(10,42,94,0.1);
+  border-radius:14px;
+  padding:26px 28px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:26px;
+  align-items:center;
+}
+.ring-wrap{position:relative; width:132px; height:132px; flex-shrink:0;}
+.ring-wrap svg{transform:rotate(-90deg);}
+.ring-center{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+}
+.ring-center .pct{
+  font-family:'Archivo Black',sans-serif;
+  font-size:26px;
+  color:var(--navy);
+}
+.ring-center .txt{
+  font-size:10px;
+  color:var(--royal);
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+.metro-text h3{
+  font-size:17px; font-weight:700; color:var(--navy); margin-bottom:6px;
+}
+.metro-text p{
+  font-size:14px; color:#4a5568; line-height:1.55;
+}
+.metro-text .highlight{
+  color:var(--green); font-weight:700;
+}
 
-  /* ---- Card grids ---- */
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:16px;
-    margin-top:24px;
-  }
-  .card{
-    background:linear-gradient(160deg, var(--ink-2), rgba(60,23,64,.6));
-    border:1px solid rgba(232,147,179,.18);
-    border-radius:8px;
-    padding:20px 20px 18px;
-    transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;
-  }
-  .card:hover{ border-color:var(--gold); transform:translateY(-4px); box-shadow:0 14px 30px -12px rgba(232,147,179,.35); }
-  .card .icon{ margin-bottom:12px; color:var(--gold-soft); }
-  .card h3{ font-size:1rem; font-weight:600; margin:0 0 8px 0; font-family:'Fraunces',serif; }
-  .card p{ font-size:.86rem; color:var(--text-on-dark-dim); line-height:1.5; margin:0; }
+/* REGIONAL DEMAND */
+.bars{
+  background:var(--paper);
+  border:1px solid rgba(10,42,94,0.1);
+  border-radius:14px;
+  padding:26px 28px;
+}
+.bar-row{margin-bottom:20px;}
+.bar-row:last-child{margin-bottom:0;}
+.bar-top{
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-bottom:7px;
+}
+.bar-top .name{font-size:14.5px; font-weight:600; color:var(--navy);}
+.bar-top .figs{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12.5px; color:var(--royal); font-weight:600;
+}
+.bar-track{
+  width:100%; height:12px; border-radius:6px;
+  background:rgba(10,42,94,0.08);
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%; border-radius:6px;
+  background:linear-gradient(90deg, var(--royal), var(--gold));
+}
+.colon-note{
+  margin-top:20px;
+  padding:14px 16px;
+  background:rgba(45,106,79,0.08);
+  border-left:3px solid var(--green);
+  border-radius:6px;
+  font-size:13.5px;
+  color:#2d4a3e;
+  line-height:1.5;
+}
+.colon-note b{color:var(--green);}
 
-  /* ---- Flow (ELASH) ---- */
-  .flow{ display:flex; flex-wrap:wrap; gap:0; margin-top:28px; align-items:stretch; }
-  .flow-step{
-    flex:1; min-width:190px;
-    background:var(--ink-2);
-    border:1px solid rgba(232,147,179,.16);
-    padding:20px;
-    position:relative;
-  }
-  .flow-step .num{ font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:.78rem; }
-  .flow-step h4{ font-size:.92rem; margin:10px 0 6px; font-family:'Fraunces',serif; font-weight:600; }
-  .flow-step p{ font-size:.82rem; color:var(--text-on-dark-dim); line-height:1.45; margin:0; }
-  .flow-arrow{
-    display:flex;align-items:center;justify-content:center;
-    width:34px; color:var(--gold-soft); font-size:1.1rem;
-  }
-  @media (max-width:900px){ .flow{ flex-direction:column; } .flow-arrow{ width:100%; height:24px; transform:rotate(90deg); } }
+/* NEW CAREERS */
+.careers-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.career-card{
+  background:var(--navy);
+  color:#fff;
+  border-radius:14px;
+  padding:22px 22px 20px 22px;
+  position:relative;
+  overflow:hidden;
+}
+.career-card::before{
+  content:"NUEVO";
+  position:absolute;
+  top:16px; right:18px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9.5px;
+  letter-spacing:1.5px;
+  color:var(--gold);
+  font-weight:600;
+}
+.career-card h4{
+  font-size:16.5px; font-weight:700; max-width:190px; line-height:1.3;
+  margin-top:20px;
+}
+.career-card .tag{
+  margin-top:12px;
+  font-size:12px;
+  color:rgba(255,255,255,0.6);
+}
+.demand-note{
+  grid-column:1/-1;
+  font-size:13px; color:#4a5568;
+  padding-top:4px;
+}
+.demand-note b{color:var(--navy);}
 
-  /* ---- Two column ---- */
-  .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:22px; }
-  @media (max-width:820px){ .twocol{ grid-template-columns:1fr; } }
-  .colblock h4{ font-family:'Fraunces',serif; font-size:1.05rem; margin:0 0 12px; color:var(--gold-soft); }
-  .colblock ul{ margin:0; padding-left:18px; }
-  .colblock li{ font-size:.88rem; color:var(--text-on-dark-dim); margin-bottom:9px; line-height:1.5; }
+/* TOP PROGRAMS */
+.programs-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.program-card{
+  background:var(--paper);
+  border:1px solid rgba(10,42,94,0.1);
+  border-radius:14px;
+  padding:22px 24px;
+}
+.program-card .ptitle{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:1.5px;
+  font-weight:600;
+  color:var(--gold);
+  background:var(--navy);
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:20px;
+  margin-bottom:14px;
+}
+.program-card ol{
+  list-style:none;
+  counter-reset:prog;
+}
+.program-card li{
+  counter-increment:prog;
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  padding:9px 0;
+  border-bottom:1px solid rgba(10,42,94,0.08);
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--navy);
+}
+.program-card li:last-child{border-bottom:none;}
+.program-card li::before{
+  content:counter(prog);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  font-weight:700;
+  color:#fff;
+  background:var(--royal);
+  width:20px; height:20px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.program-card.lic li::before{background:var(--green);}
+.program-card.lic .ptitle{background:var(--green);}
 
-  /* ---- checklist ---- */
-  .checklist{ margin-top:22px; display:flex; flex-direction:column; gap:10px; max-width:780px; }
-  .check-row{
-    display:flex; gap:14px; align-items:flex-start;
-    padding:12px 14px;
-    background:var(--ink-2);
-    border-left:2px solid var(--gold);
-    border-radius:3px;
-  }
-  .check-row svg{ flex-shrink:0; margin-top:2px; color:var(--gold-soft); }
-  .check-row .t{ font-size:.9rem; color:var(--text-on-dark); line-height:1.45; }
-  .check-row .tag-pill{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; color:var(--muted); margin-left:auto; padding-left:12px; white-space:nowrap; align-self:center; }
+/* PROJECTION */
+.proj-card{
+  background:linear-gradient(135deg, var(--gold) 0%, #E8990A 100%);
+  border-radius:14px;
+  padding:28px 30px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center;
+}
+.proj-text h3{
+  font-size:18px; color:var(--navy); font-weight:800; margin-bottom:6px;
+}
+.proj-text p{
+  font-size:13.5px; color:#4a3400; max-width:420px; line-height:1.55;
+}
+.proj-numbers{
+  display:flex; gap:18px;
+}
+.proj-num{
+  text-align:center;
+}
+.proj-num .n{
+  font-family:'Archivo Black',sans-serif;
+  font-size:30px; color:var(--navy); line-height:1;
+}
+.proj-num .l{
+  font-size:10.5px; color:#4a3400; font-weight:600; margin-top:4px; max-width:80px;
+}
 
-  /* ---- closing ---- */
-  #s9 .slide-body{ max-width:700px; }
-  .signoff{ margin-top:40px; font-size:.85rem; color:var(--muted); }
-  .signoff .line{ width:40px;height:1px;background:var(--gold); margin-bottom:16px; }
+/* FOOTER */
+footer{
+  margin-top:50px;
+  padding-top:20px;
+  border-top:1px solid rgba(10,42,94,0.12);
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:10px;
+}
+footer .brand{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px; color:var(--royal); font-weight:600; letter-spacing:1px;
+}
+footer .motto{
+  font-size:11.5px; color:#8a97ad; font-style:italic;
+}
 
-  /* ---- nav controls ---- */
-  #dots{
-    position:fixed; bottom:26px; left:50%; transform:translateX(-50%);
-    display:flex; gap:9px; z-index:20;
-  }
-  .navdot{
-    width:7px;height:7px;border-radius:50%;
-    background:rgba(232,147,179,.25);
-    cursor:pointer; transition:background .3s, width .3s;
-  }
-  .navdot.active{ background:var(--gold); width:20px; border-radius:4px; }
-
-  .arrow-btn{
-    position:fixed; top:50%; transform:translateY(-50%);
-    width:44px;height:44px; border-radius:50%;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(232,147,179,.2);
-    color:var(--gold-soft);
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer; z-index:20; transition:background .25s, border-color .25s;
-  }
-  .arrow-btn:hover{ background:rgba(232,147,179,.12); border-color:var(--gold); }
-  .arrow-btn.prev{ left:22px; }
-  .arrow-btn.next{ right:22px; }
-  .arrow-btn.hidden{ opacity:0; pointer-events:none; }
-
-  #progress-label{
-    position:fixed; top:26px; right:34px; z-index:20;
-    font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--muted);
-  }
-  #brand-label{
-    position:fixed; top:26px; left:34px; z-index:20;
-    font-family:'IBM Plex Mono',monospace; font-size:.7rem; color:var(--muted);
-    text-transform:uppercase; letter-spacing:.1em;
-  }
-  @media (max-width:700px){
-    .arrow-btn{ width:36px;height:36px; }
-    #brand-label, #progress-label{ display:none; }
-    .slide{ padding:9vh 6vw 12vh 6vw; }
-  }
+@media (max-width:640px){
+  .hero-stats{grid-template-columns:1fr;}
+  .metro-card{grid-template-columns:1fr; text-align:center;}
+  .metro-text{order:2;}
+  .ring-wrap{margin:0 auto; order:1;}
+  .careers-grid{grid-template-columns:1fr;}
+  .proj-card{grid-template-columns:1fr; text-align:center;}
+  .proj-numbers{justify-content:center;}
+}
 </style>
 </head>
 <body>
 
-<div class="glow g1"></div>
-<div class="glow g2"></div>
-<div class="glow g3"></div>
-<div class="seam"></div>
-<div id="brand-label">SIU · Gestión 2026</div>
-<div id="progress-label">01 / 09</div>
+<header>
+  <div class="wrap header-inner">
+    <div class="eyebrow">Universidad Tecnológica de Panamá</div>
+    <h1>Prueba de Aptitud Académica<br>I Convocatoria 2026&#8202;–&#8202;2027</h1>
+    <p class="sub">Resumen de resultados a nivel nacional: inscripción, distribución por sede, demanda regional y proyección de aprobación.</p>
 
-<div id="deck">
-
-  <!-- SLIDE 0 — PORTADA -->
-  <section class="slide active" id="s0">
-    <div class="slide-body">
-      <div class="eyebrow">INFORME DE GESTIÓN · 2026</div>
-      <h1 class="title display">Dirección Nacional del<br>Sistema de Ingreso Universitario</h1>
-      <p class="lead">Un recorrido por las labores administrativas e investigativas realizadas a lo largo de la gestión, sostenidas en una jornada compartida entre dos frentes.</p>
-      <div class="role-chip-row">
-        <div class="chip"><span class="dot-chip" style="background:var(--gold);"></span>50% Administración — Dirección Nacional del SIU</div>
-        <div class="chip"><span class="dot-chip" style="background:var(--teal-soft);"></span>50% Investigación</div>
+    <div class="hero-stats">
+      <div class="hero-cell">
+        <div class="num">9,043</div>
+        <div class="lbl">Inscritos a nivel nacional</div>
       </div>
-      <div class="start-hint" onclick="goTo(1)">
-        Comenzar recorrido
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <div class="hero-cell">
+        <div class="num">7,243</div>
+        <div class="lbl">Estudiantes habilitados</div>
+      </div>
+      <div class="hero-cell">
+        <div class="num">80%</div>
+        <div class="lbl">Tasa de habilitación</div>
       </div>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- SLIDE 1 — ROL DUAL -->
-  <section class="slide" id="s1">
-    <div class="slide-body">
-      <div class="eyebrow">ESTRUCTURA DE LA JORNADA <span class="n">— 01</span></div>
-      <h2 class="title display">Un rol dual, una sola gestión</h2>
-      <p class="lead">La jornada se divide en dos mitades iguales. Pasa el cursor sobre cada una.</p>
-      <div class="split-wrap">
-        <div class="split-half admin">
-          <div>
-            <div class="split-pct display">50%</div>
-            <div class="split-label">Administración</div>
-            <div class="split-desc">Dirección Nacional del Sistema de Ingreso Universitario: gestión presupuestaria, ELASH, Programa de Verano, PAA y planificación anual.</div>
-          </div>
-          <div class="split-tags">
-            <span class="tag">Presupuesto</span><span class="tag">ELASH</span><span class="tag">PAA</span><span class="tag">Verano</span><span class="tag">Planificación</span>
-          </div>
-        </div>
-        <div class="split-half research">
-          <div>
-            <div class="split-pct display">50%</div>
-            <div class="split-label">Investigación</div>
-            <div class="split-desc">Agenda investigativa desarrollada en paralelo durante la otra mitad de la jornada, como línea de trabajo independiente de la Dirección.</div>
-          </div>
-          <div class="split-tags">
-            <span class="tag">Jornada paralela</span>
-          </div>
-        </div>
+<div class="wrap">
+
+  <div class="section-label"><div class="dot"></div><span>Concentración por sede</span></div>
+  <div class="metro-card">
+    <div class="ring-wrap">
+      <svg width="132" height="132" viewBox="0 0 132 132">
+        <circle cx="66" cy="66" r="56" fill="none" stroke="rgba(10,42,94,0.08)" stroke-width="14"/>
+        <circle cx="66" cy="66" r="56" fill="none" stroke="#14448C" stroke-width="14"
+          stroke-dasharray="351.8" stroke-dashoffset="147.8" stroke-linecap="round"/>
+      </svg>
+      <div class="ring-center">
+        <div class="pct">58%</div>
+        <div class="txt">DEL TOTAL</div>
       </div>
     </div>
-  </section>
-
-  <!-- SLIDE 2 — PRESUPUESTO -->
-  <section class="slide" id="s2">
-    <div class="slide-body">
-      <div class="eyebrow">GESTIÓN PRESUPUESTARIA <span class="n">— 02</span></div>
-      <h2 class="title display">Formulación del anteproyecto 2026</h2>
-      <p class="lead">Elaboración de los componentes presupuestarios que sostienen la operación del SIU.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19h16M6 19V9m4 10V5m4 14v-7m4 7V11"/></svg></div>
-          <h3>Anteproyecto presupuestario</h3>
-          <p>Elaboración del anteproyecto que sirve de base para la asignación de recursos del SIU.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
-          <h3>Presupuesto de funcionamiento</h3>
-          <p>Formulación del presupuesto destinado a sostener las operaciones regulares de la Dirección.</p>
-        </div>
-        <div class="card">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12l4-4 4 4 4-6 6 8"/></svg></div>
-          <h3>Proyecto de inversión</h3>
-          <p>Formulación del proyecto orientado al fortalecimiento de la gestión administrativa del SIU.</p>
-        </div>
-      </div>
+    <div class="metro-text">
+      <h3>Campus Metropolitano concentra la mayoría de los habilitados</h3>
+      <p>De los 7,243 estudiantes habilitados, <span class="highlight">4,237 corresponden al Campus Metropolitano</span>, la sede con mayor volumen de estudiantes a nivel nacional.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- SLIDE 3 — ELASH -->
-  <section class="slide" id="s3">
-    <div class="slide-body">
-      <div class="eyebrow">ELASH <span class="n">— 03</span></div>
-      <h2 class="title display">Coordinación de la prueba ELASH</h2>
-      <p class="lead">De la coordinación con el centro de lenguas hasta el registro final de resultados.</p>
-      <div class="flow">
-        <div class="flow-step">
-          <div class="num">01</div>
-          <h4>Coordinación con el centro de lenguas</h4>
-          <p>Gestión de la Prueba Versant: definición de menores de escala y registros.</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="num">02</div>
-          <h4>Distribución de certificaciones</h4>
-          <p>Envío de certificaciones de PAA y ELASH a los centros regionales, una vez aplicadas las pruebas.</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="num">03</div>
-          <h4>Corrección de cédulas</h4>
-          <p>Revisión y corrección de cédulas para el registro correcto de resultados.</p>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step">
-          <div class="num">04</div>
-          <h4>Registro de resultados</h4>
-          <p>Registro final de los resultados obtenidos en la prueba ELASH.</p>
-        </div>
-      </div>
+  <div class="section-label"><div class="dot"></div><span>Centros regionales con mayor demanda</span></div>
+  <div class="bars">
+    <div class="bar-row">
+      <div class="bar-top"><span class="name">Panamá Oeste</span><span class="figs">11.81% &nbsp;·&nbsp; 854 estudiantes</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
     </div>
-  </section>
+    <div class="bar-row">
+      <div class="bar-top"><span class="name">Chiriquí</span><span class="figs">8.22% &nbsp;·&nbsp; 595 estudiantes</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-top"><span class="name">Veraguas</span><span class="figs">5.79% &nbsp;·&nbsp; 419 estudiantes</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:49%"></div></div>
+    </div>
+    <div class="colon-note"><b>Colón también destaca:</b> el Centro Regional de Colón registró un crecimiento notable en la demanda respecto a convocatorias anteriores.</div>
+  </div>
 
-  <!-- SLIDE 4 — VERANO / IVEU -->
-  <section class="slide" id="s4">
-    <div class="slide-body">
-      <div class="eyebrow">PROGRAMA DE VERANO Y SEMINARIO IVEU <span class="n">— 04</span></div>
-      <h2 class="title display">Logística de temporada</h2>
-      <p class="lead">Dos procesos paralelos de planificación y difusión hacia los centros regionales.</p>
-      <div class="twocol">
-        <div class="colblock">
-          <h4>Programa de Verano (proyecciones)</h4>
-          <ul>
-            <li>Distribución de la carga horaria de los cursos.</li>
-            <li>Asignación de aulas para su desarrollo.</li>
-            <li>Solicitud de docentes para los cursos de matemática básica y precálculo.</li>
-          </ul>
-        </div>
-        <div class="colblock">
-          <h4>Seminario IVEU</h4>
-          <ul>
-            <li>Distribución de las jornadas del seminario IVEU.</li>
-            <li>Envío de correo masivo para la convocatoria y difusión.</li>
-          </ul>
-        </div>
-      </div>
+  <div class="section-label"><div class="dot"></div><span>Nuevas carreras 2026</span></div>
+  <div class="careers-grid">
+    <div class="career-card">
+      <h4>Ingeniería en Biotecnología</h4>
+      <div class="tag">Oferta académica · Sede Panamá</div>
     </div>
-  </section>
+    <div class="career-card">
+      <h4>Ingeniería en Electrónica Biomédica</h4>
+      <div class="tag">Oferta académica · Sede Panamá</div>
+    </div>
+    <div class="demand-note">Las carreras con mayor demanda continúan siendo las de <b>Ingeniería</b>.</div>
+  </div>
 
-  <!-- SLIDE 5 — PAA -->
-  <section class="slide" id="s5">
-    <div class="slide-body">
-      <div class="eyebrow">PAA <span class="n">— 05</span></div>
-      <h2 class="title display">Prueba de Aptitud Académica</h2>
-      <p class="lead">Coordinación integral: desde el vínculo con College Board hasta la toma de decisiones basada en datos.</p>
-      <div class="grid">
-        <div class="card"><h3>College Board</h3><p>Reuniones de contacto para el manejo operativo de las pruebas.</p></div>
-        <div class="card"><h3>Proyecciones y compras</h3><p>Formulación de proyecciones y compras de pruebas PAA.</p></div>
-        <div class="card"><h3>Certificaciones</h3><p>Distribución de certificaciones de la PAA a los centros regionales.</p></div>
-        <div class="card"><h3>Oferta académica</h3><p>Carga de la oferta académica para la PAA, I convocatoria 2026-2027.</p></div>
-        <div class="card"><h3>Datos para decisiones</h3><p>Manejo de datos para apoyar la toma de decisiones del programa PAA.</p></div>
-      </div>
+  <div class="section-label"><div class="dot"></div><span>Carreras más buscadas</span></div>
+  <div class="programs-grid">
+    <div class="program-card">
+      <div class="ptitle">INGENIERÍAS</div>
+      <ol>
+        <li>Ingeniería Industrial</li>
+        <li>Ingeniería Civil</li>
+        <li>Ingeniería Electromecánica</li>
+      </ol>
     </div>
-  </section>
+    <div class="program-card lic">
+      <div class="ptitle">LICENCIATURAS</div>
+      <ol>
+        <li>Lic. en Ciberseguridad</li>
+        <li>Lic. en Mercadeo y Neg. Int.</li>
+        <li>Lic. en Logística y Transp. Mult.</li>
+      </ol>
+    </div>
+  </div>
 
-  <!-- SLIDE 6 — DATOS ESTADÍSTICOS -->
-  <section class="slide" id="s6">
-    <div class="slide-body">
-      <div class="eyebrow">DATOS ESTADÍSTICOS PARA LA TOMA DE DECISIONES <span class="n">— 06</span></div>
-      <h2 class="title display">Información al servicio de la gestión</h2>
-      <p class="lead">Insumos estadísticos entregados a distintas instancias institucionales.</p>
-      <div class="grid">
-        <div class="card"><h3>DIPLAN</h3><p>Entrega de datos estadísticos para apoyar procesos de planificación institucional.</p></div>
-        <div class="card"><h3>Facultades</h3><p>Datos estadísticos proporcionados a facultades para sus propios procesos de decisión.</p></div>
-        <div class="card"><h3>Escuela de Aviación</h3><p>Informe estadístico para el programa de acompañamiento a estudiantes interesados en la carrera.</p></div>
-        <div class="card"><h3>College Board 2026</h3><p>Datos estadísticos preparados para la presentación internacional de College Board.</p></div>
-      </div>
+  <div class="section-label"><div class="dot"></div><span>Proyección de aprobación</span></div>
+  <div class="proj-card">
+    <div class="proj-text">
+      <h3>Se espera que el 60% apruebe esta 1ª convocatoria</h3>
+      <p>De los 7,243 habilitados, la UTP proyecta 4,338 estudiantes aprobados a nivel nacional, de los cuales 2,954 corresponderían a la sede de Panamá.</p>
     </div>
-  </section>
+    <div class="proj-numbers">
+      <div class="proj-num"><div class="n">4,338</div><div class="l">Aprobados proyectados (nacional)</div></div>
+      <div class="proj-num"><div class="n">2,954</div><div class="l">Aprobados proyectados (sede Panamá)</div></div>
+    </div>
+  </div>
 
-  <!-- SLIDE 7 — PLANIFICACIÓN Y MEJORAS -->
-  <section class="slide" id="s7">
-    <div class="slide-body">
-      <div class="eyebrow">PLANIFICACIÓN Y MEJORAS <span class="n">— 07</span></div>
-      <h2 class="title display">Anticipar, ordenar, mejorar</h2>
-      <p class="lead">Siete iniciativas de planificación y fortalecimiento del Sistema de Ingreso Universitario.</p>
-      <div class="checklist">
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div class="t">Calendario de actividades del SIU 2026, con planificación anticipada de aplicaciones de pruebas y cursos ofertados.</div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div class="t">Borrador del calendario de admisión 2026-2027 y 2027-2028.<span class="tag-pill">2027-2028 en revisión</span></div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17 3.13a4 4 0 0 1 0 7.75M22 21v-2a4 4 0 0 0-3-3.87"/></svg><div class="t">Formulación del Proyecto de Servicio Social como apoyo a las labores del SIU.</div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><div class="t">Programación de formularios y automatización de correos masivos para el Curso de Familiarización y Afianzamiento para la PAA.</div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></svg><div class="t">Elaboración de proyectos en FTP para la recaudación de fondos.</div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg><div class="t">Redacción de notas de prensa.</div></div>
-        <div class="check-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><div class="t">Reuniones con DITIC para sugerir mejoras en el sistema de matrícula.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDE 8 — CIERRE -->
-  <section class="slide" id="s8">
-    <div class="slide-body">
-      <div class="eyebrow">SÍNTESIS <span class="n">— 08</span></div>
-      <h2 class="title display">Un año, dos frentes, una gestión</h2>
-      <p class="lead">Presupuesto, ELASH, Programa de Verano, PAA, datos institucionales y planificación: seis frentes de trabajo administrativo sostenidos en la mitad de una jornada compartida con la investigación.</p>
-      <div class="signoff">
-        <div class="line"></div>
-        Dirección Nacional del Sistema de Ingreso Universitario · Gestión 2026
-      </div>
-    </div>
-  </section>
+  <footer>
+    <div class="brand">UTP · PAA I CONVOCATORIA 2026–2027</div>
+    <div class="motto">"Camino a la excelencia a través del mejoramiento continuo"</div>
+  </footer>
 
 </div>
-
-<div class="arrow-btn prev" onclick="prevSlide()">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-</div>
-<div class="arrow-btn next" onclick="nextSlide()">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-</div>
-
-<div id="dots"></div>
-
-<script>
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const total = slides.length;
-  let current = 0;
-
-  const dotsWrap = document.getElementById('dots');
-  slides.forEach((_, i) => {
-    const d = document.createElement('div');
-    d.className = 'navdot' + (i === 0 ? ' active' : '');
-    d.onclick = () => goTo(i);
-    dotsWrap.appendChild(d);
-  });
-  const dots = Array.from(dotsWrap.children);
-  const progressLabel = document.getElementById('progress-label');
-  const prevBtn = document.querySelector('.arrow-btn.prev');
-  const nextBtn = document.querySelector('.arrow-btn.next');
-
-  function render(){
-    slides.forEach((s,i) => s.classList.toggle('active', i === current));
-    dots.forEach((d,i) => d.classList.toggle('active', i === current));
-    progressLabel.textContent = String(current+1).padStart(2,'0') + ' / ' + String(total-1).padStart(2,'0');
-    prevBtn.classList.toggle('hidden', current === 0);
-    nextBtn.classList.toggle('hidden', current === total-1);
-  }
-  function goTo(i){ current = Math.max(0, Math.min(total-1, i)); render(); }
-  function nextSlide(){ goTo(current+1); }
-  function prevSlide(){ goTo(current-1); }
-
-  document.addEventListener('keydown', (e) => {
-    if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){ e.preventDefault(); nextSlide(); }
-    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); prevSlide(); }
-    if(e.key === 'Home') goTo(0);
-    if(e.key === 'End') goTo(total-1);
-  });
-
-  // swipe support
-  let touchX = null;
-  document.addEventListener('touchstart', e => touchX = e.touches[0].clientX);
-  document.addEventListener('touchend', e => {
-    if(touchX === null) return;
-    const dx = e.changedTouches[0].clientX - touchX;
-    if(dx > 50) prevSlide();
-    if(dx < -50) nextSlide();
-    touchX = null;
-  });
-
-  render();
-</script>
 
 </body>
 </html>
